@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="facci.pm.ta2.poo.pra1.ResultsActivity">
+
+    <TableLayout  android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--añadiendo los campos nombre, precio, descripción.-->
+        <!--añadiendo el campo nombre.-->
+        <TableRow >
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/image_label"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+
+
+        </TableRow>
+        <TableRow >
+            <!--añadiendo el campo imagen.-->
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent" android:layout_height="150dip"
+                android:layout_weight="1"
+                android:scaleType="fitCenter" />
+        </TableRow>
+        <TableRow>
+            <!--añadiendo el campo descripcion.-->
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="@string/image_label"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+        <TableRow>
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:gravity="center" android:orientation="horizontal">
+                <!--añadiendo el campo precio ademas del signo de dolar.-->
+                <TextView
+                    android:id="@+id/pre" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@android:color/holo_red_light" />
+                <TextView
+                    android:id="@+id/imgg" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_below="@+id/thumbnail" android:layout_marginLeft="10dp"
+                    android:text="@string/signo"
+                    android:textColor="@color/precioRojo" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
